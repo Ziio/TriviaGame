@@ -36,7 +36,6 @@ answer: 0
 $(document).ready(function() {
 
 
-
 $("#start_button").click(function(){
     $(this).hide();
     counter = setInterval(timer, 1000);
