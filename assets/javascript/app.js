@@ -35,6 +35,8 @@ answer: 0
 ];
 $(document).ready(function() {
 
+
+
 $("#start_button").click(function(){
     $(this).hide();
     counter = setInterval(timer, 1000);
@@ -63,7 +65,7 @@ nextQ = function() {
     count = 30;
     $("#clock").html("");
     setTimeout(function() {
-        
+
     })
 }
 
@@ -89,11 +91,11 @@ function displayTrivia() {
      triviaQ[0].answer;
      if(userPick != triviaQ[0].answer) {
     
-     $('#choices').text("Wrong Answer! The correct answer is Rajah.");
+     $('#choices').text("Correct!");
      incorrectAns++;
     
     } else if (userPick === triviaQ[0].answer) {
-    $('#choices').text("Correct!!! The pet tiger name is Rajah");
+    $('#choices').text("Correct!!!");
     correctAns++;
     
     }
