@@ -36,6 +36,7 @@ answer: 0
 $(document).ready(function() {
 
 
+
 $("#start_button").click(function(){
     $(this).hide();
     counter = setInterval(timer, 1000);
@@ -77,24 +78,24 @@ function displayTrivia() {
       var choicesArr = triviaQ[0].choices;
     
       for (let i = 0; i < choicesArr.length; i++) {
-        var button = $('<button>');
+        var button = $("<button>");
         button.text(choicesArr[i]);
-        button.attr('data-id', i);
-        $('#choices').append(button);
+        button.attr("data-id", i);
+        $("#choices").append(button);
        }
     
       } 
     
-     $('#choices').on('click', 'button', function(){
+     $("#choices").on("click", "button", function(){
      userPick = $(this).data("id");
      triviaQ[0].answer;
      if(userPick != triviaQ[0].answer) {
     
-     $('#choices').text("Correct!");
+     $("#choices").text("Correct!");
      incorrectAns++;
     
     } else if (userPick === triviaQ[0].answer) {
-    $('#choices').text("Correct!!!");
+    $("#choices").text("Correct!!!");
     correctAns++;
     
     }
